@@ -8,37 +8,38 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     background: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
     transition: box-shadow 0.3s ease;
 }
 
 .container:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Header Styling */
 .header {
     text-align: center;
-    padding: 10px;
+    padding: 20px 10px;
     background-color: #fce4d6;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    border-radius: 10px 10px 0 0;
 }
 
 .header h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin: 0;
-    color: #333;
+    color: #222;
 }
 
 .name-section {
     font-size: 1.2em;
-    color: #333;
+    color: #555;
     padding: 10px;
 }
 
@@ -48,6 +49,10 @@ body {
     flex-wrap: wrap;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .photo-section {
@@ -56,32 +61,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     border-right: 1px solid #ddd;
-    font-weight: bold;
+}
+
+.photo-section img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 .details-section {
-    flex: 3;
-    background-color: #f8f8f8;
+    flex: 2;
+    background-color: #f9f9f9;
     padding: 20px;
 }
 
 .details-section p {
-    margin: 5px 0;
+    margin: 6px 0;
+    font-size: 0.95em;
 }
 
-/* Subject and Link Sections */
+/* Section Boxes */
 .subject-section,
 .links-section,
 .status-section {
-    background-color: #f4f4f4;
-    padding: 15px;
+    background-color: #fff;
+    padding: 15px 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    margin-top: 10px;
-    cursor: pointer;
-    overflow: hidden;
+    margin-top: 15px;
     transition: all 0.3s ease;
 }
 
@@ -89,40 +98,60 @@ body {
 .links-section:hover,
 .status-section:hover {
     background-color: #e9f5ff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-.collapsible {
-    max-height: 50px;
+/* Link Styling */
+.links-section a {
+    color: #0073e6;
+    text-decoration: none;
+    word-break: break-all;
 }
 
-.collapsible.expanded {
-    max-height: 200px;
-    padding: 20px;
+.links-section a:hover {
+    text-decoration: underline;
 }
 
-/* Signature Section */
+/* Image Styling in Sections */
+.status-section img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Optional Signature Section */
 .signature-section {
     background-color: #f9f9f9;
     padding: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
     font-weight: bold;
     border-top: 1px solid #ddd;
     border-radius: 8px;
-    cursor: default;
+    color: #666;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .info-section {
         flex-direction: column;
     }
 
     .photo-section,
     .details-section {
-        flex: 1;
+        flex: 1 1 100%;
         border-right: none;
         text-align: center;
+    }
+
+    .photo-section {
+        padding: 10px;
+    }
+
+    .details-section {
+        padding: 15px;
     }
 }
