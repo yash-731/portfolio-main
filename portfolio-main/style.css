@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #fce4d6;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #333;
+}
+
+.name-section {
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px;
+}
+
+/* Information Section */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.photo-section {
+    flex: 1;
+    background-color: #fce4d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.details-section {
+    flex: 3;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.details-section p {
+    margin: 5px 0;
+}
+
+/* Subject and Link Sections */
+.subject-section,
+.links-section,
+.status-section {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.subject-section:hover,
+.links-section:hover,
+.status-section:hover {
+    background-color: #e9f5ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collapsible {
+    max-height: 50px;
+}
+
+.collapsible.expanded {
+    max-height: 200px;
+    padding: 20px;
+}
+
+/* Signature Section */
+.signature-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: default;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .info-section {
+        flex-direction: column;
+    }
+
+    .photo-section,
+    .details-section {
+        flex: 1;
+        border-right: none;
+        text-align: center;
+    }
+}
